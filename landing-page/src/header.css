@@ -1,0 +1,17 @@
+.image-background {
+    background-image: url('./img/header.png');
+    background-size: cover;
+    width: 50%;
+    height: 50%;
+    position: relative;
+}
+
+.content {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    right: 10%;
+    bottom: 10%;
+    color: white;
+    font-size: 2rem;
+}

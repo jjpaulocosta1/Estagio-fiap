@@ -1,0 +1,241 @@
+*,*::after,
+*::before{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #91A3AD;
+}
+
+.nav{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    height: 8vh;
+    background: #000;
+}
+
+.nav__menu .nav__item-curso,
+.nav__menu .nav__item-matriz,
+.nav__menu .nav__item-turmas {
+    margin: 0 20px;
+}
+
+.nav__brand,
+.nav__menu,
+.nav__button{
+    display: flex;
+    align-items: center;
+}
+
+.nav__button{
+    justify-content: center;
+    background-color: #ED145B;
+    color: #fff;
+    height: 40px;
+    width: 150px;
+    text-align: center;
+    border: 2px solid #ED145B;
+    border-radius: 0;
+}
+
+.nav__button:hover{
+    box-shadow: 0 0 10px #ED145B;
+}
+
+.text-title {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.text-title-2{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ED145B;
+}
+
+.text-container{
+    position: absolute;
+    left: 50%;
+    top: 58%;
+    display: flex;
+    transform: translate(-50%,-50%);
+    max-width: 80%;
+    align-items: center;
+    margin-top: 10px;
+    color: #91A3AD;
+}
+
+.text-container-left{
+    flex: 1;
+    width: 45%;
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+.text-container-right{
+    flex: 1;
+    width: 45%;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.text-divider{
+    width: 1px;
+    height: 80%;
+    transform: rotate(90deg);
+    margin: 0 10px;
+    border: 1px solid #91A3AD;
+    width: 10%;
+}
+
+
+.nav__brand{
+    display: flex;
+    justify-content: center;
+}
+
+
+.nav__brand-logo{
+    max-width: 100%;
+    height: auto;
+    align-self: center;
+}
+
+.nav__menu{
+    grid-column: 2;
+    justify-content: center;
+}
+
+.nav__menu .nav__item-curso{
+    color: #91A3AD;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.nav__menu .nav__item-matriz{
+    color: #91A3AD;
+    text-transform: uppercase;
+}
+
+.nav__menu .nav__item-turmas{
+    color: #91A3AD;
+    text-transform: uppercase;
+}
+
+.image-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-container img{
+    width: 100%;
+    height: auto;
+}
+
+.image-text{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: grid;
+    color: #91A3AD;
+    font-size: 3vw;
+    text-transform: uppercase;
+}
+
+.image-text-2{
+    position: absolute;
+    top: 39%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: grid;
+    color: #91A3AD;
+    font-size: 1.8vw;
+    text-transform: uppercase;
+    max-width: 80%;
+}
+
+.inscreva-button{
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    color: #ED145B;
+    padding: 10px 20px;
+    border: 2px solid #ED145B;
+    border-radius: 0;
+    font-size: 1.6rem;
+}
+
+.nav__toggler div{
+    width: 3rem;
+    height: 0.2rem;
+    margin: 0.4rem;
+    background: darkgray;
+    transition: 0.4s ease-in;
+}
+
+.nav__toggler {
+    cursor: pointer;
+    display: none;
+}
+
+
+
+@media screen and (max-width: 768px){
+    .nav__toggler{
+        display: block;
+    }
+    .nav__menu{
+        position: fixed;
+        top: 7vh;
+        right: 0;
+        width: 50%;
+        height: 93vh;
+        background: #91A3AD;
+        flex-direction: column;
+        transform: translateX(100%);
+        transition: 0.5s ease-in;
+    }
+    .nav__button{
+        height: 40px;
+        width: 150px;
+    }
+}
+
+
+.nav__active{
+    transform: translateX(0);
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-4px, 5px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(-45deg) translate(-4px, 5px);
+}
